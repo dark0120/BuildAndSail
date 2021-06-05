@@ -6,7 +6,7 @@ local MainTab = Window:CreateSection("Build and Sail") -- Create Section makes n
 
 MainTab:CreateLabel("Farming Options") -- 1 Label Text
 MainTab:CreateButton("Auto Money","Money Farm", function() -- 1 (Button Info) 2 (Button Text)
-   while true do
+   while wait() do
 local string_1 = "BuyBox";
 local string_2 = "Crate";
 local number_1 = -99991;
@@ -15,7 +15,7 @@ Target:InvokeServer(string_1, string_2, number_1);
 end
 end)
 MainTab:CreateButton("Auto Buy","3rd Block in shop", function() -- 1 (Button Info) 2 (Button Text)
-while true do
+while wait() do
 local args = {
     [1] = "BuyBlock",
     [2] = 3
@@ -25,7 +25,7 @@ game:GetService("Players").LocalPlayer.Inventory:InvokeServer(unpack(args))
 end
 end)
 MainTab:CreateButton("Auto Buy","Crate", function() -- 1 (Button Info) 2 (Button Text)
-while true do
+while wait() do
 local args = {
     [1] = "BuyBox",
     [2] = "Crate",
@@ -36,7 +36,7 @@ game:GetService("Players").LocalPlayer.Inventory:InvokeServer(unpack(args))
 end
 end)
 MainTab:CreateButton("Auto Buy","Chest", function() -- 1 (Button Info) 2 (Button Text)
-while true do
+while wait() do
 local args = {
     [1] = "BuyBox",
     [2] = "Chest",
@@ -47,7 +47,7 @@ game:GetService("Players").LocalPlayer.Inventory:InvokeServer(unpack(args))
 end
 end)
 MainTab:CreateButton("Auto Buy","Case", function() -- 1 (Button Info) 2 (Button Text)
-while true do
+while wait() do
 local args = {
     [1] = "BuyBox",
     [2] = "Case",
@@ -58,7 +58,7 @@ game:GetService("Players").LocalPlayer.Inventory:InvokeServer(unpack(args))
 end
 end)
 MainTab:CreateButton("Auto Buy","Safe", function() -- 1 (Button Info) 2 (Button Text)
-while true do
+while wait() do
 local args = {
     [1] = "BuyBox",
     [2] = "Safe",
