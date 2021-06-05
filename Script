@@ -1,0 +1,87 @@
+local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/dark0120/DarkHub/main/documentation", true))()
+
+local Window = Lib:Create();
+
+local MainTab = Window:CreateSection("Build and Sail") -- Create Section makes new tab
+
+MainTab:CreateLabel("Farming Options") -- 1 Label Text
+MainTab:CreateButton("Auto Money","Money Farm", function() -- 1 (Button Info) 2 (Button Text)
+   while true do
+local string_1 = "BuyBox";
+local string_2 = "Crate";
+local number_1 = -99991;
+local Target = game:GetService("Players").LocalPlayer.Inventory
+Target:InvokeServer(string_1, string_2, number_1);
+end
+end)
+MainTab:CreateButton("Auto Buy","3rd Block in shop", function() -- 1 (Button Info) 2 (Button Text)
+while true do
+local args = {
+    [1] = "BuyBlock",
+    [2] = 3
+}
+
+game:GetService("Players").LocalPlayer.Inventory:InvokeServer(unpack(args))
+end
+end)
+MainTab:CreateButton("Auto Buy","Crate", function() -- 1 (Button Info) 2 (Button Text)
+while true do
+local args = {
+    [1] = "BuyBox",
+    [2] = "Crate",
+    [3] = 1
+}
+
+game:GetService("Players").LocalPlayer.Inventory:InvokeServer(unpack(args))
+end
+end)
+MainTab:CreateButton("Auto Buy","Chest", function() -- 1 (Button Info) 2 (Button Text)
+while true do
+local args = {
+    [1] = "BuyBox",
+    [2] = "Chest",
+    [3] = 1
+}
+
+game:GetService("Players").LocalPlayer.Inventory:InvokeServer(unpack(args))
+end
+end)
+MainTab:CreateButton("Auto Buy","Case", function() -- 1 (Button Info) 2 (Button Text)
+while true do
+local args = {
+    [1] = "BuyBox",
+    [2] = "Case",
+    [3] = 1
+}
+
+game:GetService("Players").LocalPlayer.Inventory:InvokeServer(unpack(args))
+end
+end)
+MainTab:CreateButton("Auto Buy","Safe", function() -- 1 (Button Info) 2 (Button Text)
+while true do
+local args = {
+    [1] = "BuyBox",
+    [2] = "Safe",
+    [3] = 1
+}
+
+game:GetService("Players").LocalPlayer.Inventory:InvokeServer(unpack(args))
+end
+end)
+MainTab:CreateButton("Auto Rank","Rank Farm (must click then reset. Repeat)", function() -- 1 (Button Info) 2 (Button Text)
+local args = {
+    [1] = 12
+}
+
+game:GetService("Players").LocalPlayer.ChangedStage:FireServer(unpack(args))
+end)
+MainTab:CreateLabel("Misc") -- 1 Label Text
+MainTab:CreateSlider(16, 300, "Walkspeed", function(val) -- 1 (Min Value) 2 (Max Value) 3 (Slider Info)
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = val
+end)
+MainTab:CreateKeyBind("Opens or Closes UI", Enum.KeyCode.F, function() --1 (Keybind info); 2 default keybind
+   Lib:CloseOpen()  -- closes or opens on F click
+end)
+MainTab:CreateButton("Destroy GUI","Destroy", function() --1 (Button Text); 2 (Button Info)
+   Lib:Destroy() -- function to destroy UI
+end)
