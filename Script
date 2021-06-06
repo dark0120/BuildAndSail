@@ -68,7 +68,7 @@ local args = {
 game:GetService("Players").LocalPlayer.Inventory:InvokeServer(unpack(args))
 end
 end)
-MainTab:CreateButton("Auto Buy","Safe", function() -- 1 (Button Info) 2 (Button Text)
+MainTab:CreateButton("Auto Buy","Flowers", function() -- 1 (Button Info) 2 (Button Text)
 while wait() do
 local args = {
     [1] = "BuyBox",
