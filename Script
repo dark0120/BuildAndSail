@@ -88,7 +88,7 @@ local args = {
 game:GetService("Players").LocalPlayer.ChangedStage:FireServer(unpack(args))
 end
 end)
-MainTab:CreateButton("Kill Me","Auto Rank", function()
+MainTab:CreateButton("Kill Me","Auto Rank (Kill Me)", function()
 _G.Autoreset = true
 while _G.Autoreset do
 wait(4)
