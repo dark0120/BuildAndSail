@@ -79,12 +79,21 @@ local args = {
 game:GetService("Players").LocalPlayer.Inventory:InvokeServer(unpack(args))
 end
 end)
-MainTab:CreateButton("Auto Rank","Rank Farm (must click then reset. Repeat)", function() -- 1 (Button Info) 2 (Button Text)
+MainTab:CreateButton("Auto Rank","Rank Farm (must Use Kill Me)", function() -- 1 (Button Info) 2 (Button Text)
+while wait() do
 local args = {
     [1] = 12
 }
 
 game:GetService("Players").LocalPlayer.ChangedStage:FireServer(unpack(args))
+end
+end)
+MainTab:CreateButton("Kill Me","Auto Rank", function()
+_G.Autoreset = true
+while _G.Autoreset do
+wait(4)
+game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+end
 end)
 MainTab:CreateLabel("Misc") -- 1 Label Text
 MainTab:CreateSlider(16, 300, "Walkspeed", function(val) -- 1 (Min Value) 2 (Max Value) 3 (Slider Info)
