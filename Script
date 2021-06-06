@@ -80,7 +80,7 @@ game:GetService("Players").LocalPlayer.Inventory:InvokeServer(unpack(args))
 end
 end)
 MainTab:CreateButton("Auto Rank","Rank Farm (must Use Kill Me)", function() -- 1 (Button Info) 2 (Button Text)
-while wait() do
+while true do
 local args = {
     [1] = 12
 }
